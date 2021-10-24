@@ -1,4 +1,4 @@
-# MacPorts Support for Legacy OSX Versions
+# Support for Legacy OSX Versions
 
 Installs wrapper headers and library functions that add common
 functions missing in various older OSX releases to bring them 
@@ -10,10 +10,9 @@ Three different libraries are provided
  - libMacportsLegacySupport.dylib  - A dynamic library with the missing functions for the given OS.
  - libMacportsLegacySystem.B.dylib - Similar to libMacportsLegacySupport.dylib but in addition re-exports the symbols from libSystem.B.dylib.
 
-To use this library within [MacPorts](https://github.com/macports)
-add the `legacysupport` PortGroup to the Portfile. This will add the
-required include paths and libraries to allow the library to do it's 
-magic with most build systems.
+To use this library within a port environment, add the `legacysupport` PortGroup to the Portfile. 
+This will add the required include paths and libraries to allow the library to do it's magic 
+with most build systems.
 
 Wrapped headers and replaced functions are:
 
@@ -51,7 +50,7 @@ Wrapped headers and replaced functions are:
   </tr>
   <tr>
     <td><code>stdio.h</code></td>
-    <td>Adds <code>getline</code> and <code>getdelim</code> functions</td>
+    <td>Adds <code>dprintf</code>, <code>getline</code>, and <code>getdelim</code> functions</td>
     <td>OSX10.6</td>
   </tr>
   <tr>
